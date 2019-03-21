@@ -9,9 +9,9 @@
 		<script src="../../layui/layui-v2.4.5/layui/layui.js"></script>
 		<style>
 			.layui-form{
-				width: 20%;
+				width: 27%;
 				margin: 0 auto;
-				padding-top:10% ;
+				padding:12% 0;
 			}
 			input{
 				text-align: center;
@@ -40,8 +40,40 @@
 			}
 		</style>
 	</head>
-	<body>
+	<body style="background: url('../../img/20190226142123.jpg') center no-repeat; background-size:50%  ;">
+											<!--登陆页面-->
+								<!--头部区域-->
+			<div class="layui-header header header-doc" style="background: rgba(38,75,123,1);">
+				<div class="layui-main" style="margin: 0 auto;">
+					<ul class="layui-nav" style="background: none;">
+						<li class="layui-nav-item">
+							<a href="../layout.html">首页</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">功能</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">建议</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">社区</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">帮助中心</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">关于我们</a>
+						</li>
+						<span class="layui-breadcrumb" lay-separator="|"style="float: right; line-height: 60px;">
+							<a class="register" style="padding: 0 10px;display: inline-block;" href="../denglu/stration-zc.html">注册</a>
+							<a class="Signin" style="padding: 0 10px;display: inline-block;" href="../denglu/stration-dl.html">登录</a>
+						</span>
+					</ul>
+				</div>
+			</div>
+									<!--内容区域-->
 		<form class="layui-form" >
+			<div class="layui-header"style="color: #009E94;">找回密码</div>
 			<div class="layui-form-item input-item">
 				<label class="layui-icon layui-icon-username" for="LAY-user-login-cellphone"></label>
 				<input type="text" name="cellphone" id="LAY-user-login-cellphone" lay-verify="phone" placeholder="请输入注册时的手机号" class="layui-input">
@@ -51,7 +83,7 @@
 				<input type="text" placeholder="图形验证码" autocomplete="off"  class="layui-input" lay-verify="required">
 			</div>
 			<div class="layui-form-item input-item right " style="width: 40%; float: right; clear: none;">
-				<img src="../img/u=2241666278,698607827&fm=26&gp=0.jpg" style="width: 100%;height: 38px;"/>
+				<img src="../../img/u=2241666278,698607827&fm=26&gp=0.jpg" style="width: 100%;height: 38px;"/>
 			</div>
 			<div class="layui-form-item input-item left">
 				<label class="layui-icon layui-icon-vercode" for="LAY-user-login-vercode"></label>
@@ -64,6 +96,14 @@
 				<div class="btn" style="color: #fff;">找回密码</div>
 			</div>
 		</form>
+															<!--底部区域-->
+			<div class="layui-footer footer footer-index" style="padding: 15px 0; line-height: 30px; background: rgba(2,5,1,0.8); color: #FFF9EC;">
+				<div class="layui-main" style="text-align: center;">
+					<p>河南聚优澳品供应链管理有限公司</p>
+					<p>系统开发 莱唔科技 2019 ©版权所有 V1.0.1</p>
+					<p>联系我们</p>
+				</div>
+			</div>
 		<script>
 				$(document).ready(function(){
 		    	layui.use(['element','form','jquery'],function(){
