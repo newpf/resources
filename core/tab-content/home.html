@@ -7,37 +7,192 @@
 		<script src="../../chajian/jquery-3.2.1.min.js"></script>
 		<script src="../../layui/layui-v2.4.5/layui/layui.js"></script>
 		<style>
-			.layui-card-body a:hover{
-				cursor:pointer
+			a:hover{
+				cursor:pointer;
+				color: #93D1FF;
+			}
+			.layui-card-body a{
+				display: block;
+				margin: 15px 0 15px 0;
+			}
+			.layui-card-body span{
+				font: 10px "微软雅黑";
+				color: #009F95;
+				border: 1px solid #FFB800;
+				margin-right:15px;
+				border-radius:3px;
+				padding: 0 4px;
+			}
+			.layui-card-body cite{
+				font: 8px "微软雅黑";
+				float: right;
+				color: #777777;
+			}
+			.layui-carousel img{
+				height: 100%;
+				width: 100%;
+			}
+						/*容器样式*/
+			.layui-carousel-ind ul li{
+				height: 30px;
+				margin: 0 0 0 0;
+				padding-top:10px ;
+				width: 20%;
+				border-radius: 0;
+			}
+			.layui-carousel-ind ul{
+				width: 100%;
+				height: 40px;
+				border-radius: 0;
+				padding: 0;
+			}
+			.layui-carousel-ind{
+				top: 0;
+			}
+			.layui-tab-item img{
+				height: 160px;
+				width: 15%;
+				margin: 10px;
+				transition: all 0.6s;
+			}
+			.layui-tab-item img:hover{
+				 transform: scale(1.07);
+			}
+			.layui-tab-content div{
+				padding:0 20px;
 			}
 		</style>
 	</head>
 	<body>
 		<div class="layui-container "> 
+													<!--内容区域-->
 		<div class="layui-row">
-		    <div class="layui-col-md7"style="height: 500px; background: #EEEEEE;"></div>
-		    <div class="layui-col-md4 layui-col-md-offset1"style="height: 500px; background: #EEEEEE;">
-		    	<div class="layui-card-header">公告</div>
-		    	<div class="layui-card-body">
-				    <a>2019全球总决赛赛事中心</a><br>
-				    <a>2019全球总决赛赛事中心</a><br>
-				    <a>2019全球总决赛赛事中心</a><br>
-				    <a>2019全球总决赛赛事中心</a><br>
-				    <a>2019全球总决赛赛事中心</a><br>
-				    <a>2019全球总决赛赛事中心</a>
+													<!--左侧轮播图-->
+		    <div class="layui-col-md7"style="height: 400px;">
+		    	<div class="layui-carousel" id="test1" style="height: 400px; margin: 0;">
+					<div carousel-item>
+					    <div>
+					    	<img src="../../img/5352c282e307ba90eef447b30b7e98d7.jpg"/>
+					    </div>
+					    <div>
+					    	<img src="../../img/9673bd3d8a4cd685280519494d1b6542.jpg"/>
+					    </div>
+					    <div>
+					    	<img src="../../img/e7f915b6074ff1b1864c08ee73675299.jpg"/>
+					    </div>
+					    <div>
+					    	<img src="../../img/adc73b9b7338ef5b3502f14192261e5e.jpg"/>
+					    </div>
+					    <div>
+					    	<img src="../../img/ed49d7260a4b86bb606482780cbbf68e.jpg"/>
+					    </div>
+					</div>
 				</div>
 		    </div>
-		    <div class="layui-col-md12"style="height: 500px; margin-top:50px; background: #EEEEEE;"></div>
+		    										<!--右侧公告-->
+		    <div class="layui-col-md4 layui-col-md-offset1"style="height: 400px; background: #EEEEEE;">
+		    										<!--头部区域-->
+		    	<div class="layui-card-header" style="font-weight: 600; font: 20px/42px '微软雅黑';">公告</div>
+		    										<!--内容区域-->
+		    	<div class="layui-card-body" style="padding: 10px 40px;">
+		    		<a style="text-align: center; font: 20px '微软雅黑'; color: #1E9FFF;">"哥特萝莉"现实发售</a>
+				    <a><span style="color: #FF0000;border: 1px solid #FF0000;">置顶</span>2019全球总决赛赛事中心<cite>03-22</cite></a>
+				    <a><span>赛事</span>2019全球总决赛赛事中心<cite>03-23</cite></a>
+				    <a><span>直播</span>2019全球总决赛赛事中心<cite>03-24</cite></a>
+				    <a><span>视频</span>2019全球总决赛赛事中心<cite>03-25</cite></a>
+				    <a><span>视频</span>2019全球总决赛赛事中心<cite>03-26</cite></a>
+				    <a><span>视频</span>2019全球总决赛赛事中心<cite>03-27</cite></a>
+				</div>
+				<hr class="layui-bg-red">
+													<!--底部区域-->
+				<a  class="layui-icon" style="color: #009F95;display: block;text-align: center; font: 14px '微软雅黑';">查看更多&#xe602;</a>
+		    </div>
+		    										<!--中间内容区域-->
+		    <div class="layui-col-md12"style="height: 500px; margin-top:50px; background: #EEEEEE;">
+		    										<!--选项卡-->
+		    	<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief" style="margin: 0;">
+		    		<h2 style="float:left;line-height: 40px;margin-left:30px ;">热卖商品</h2>
+				    <ul class="layui-tab-title" style="width: 50%; margin-right:40% ; text-align: center; float: left; margin-bottom:40px ;">
+					    <li class="layui-this">商品</li>
+					    <li>商品</li>
+					    <li>商品</li>
+					    <li>商品</li>
+					    <li>商品</li>
+				    </ul>
+				    <div class="layui-tab-content">
+					    <div class="layui-tab-item layui-show">
+					    	<img src="../../img/20190226142123.jpg"/>
+					    	<img src="../../img/20190226142123.jpg"/>
+					    	<img src="../../img/20190226142123.jpg"/>
+					    	<img src="../../img/20190226142123.jpg"/>
+					    	<img src="../../img/20190226142123.jpg"/>
+					    </div>
+					    <div class="layui-tab-item">
+					    	<img src="../../img/微信图片_20190318171046.jpg"/>
+					    	<img src="../../img/微信图片_20190318171046.jpg"/>
+					    	<img src="../../img/微信图片_20190318171046.jpg"/>
+					    	<img src="../../img/微信图片_20190318171046.jpg"/>
+					    	<img src="../../img/微信图片_20190318171046.jpg"/>
+					    </div>
+					    <div class="layui-tab-item">
+					    	<img src="../../img/微信图片_20190318171038.jpg"/>
+					    	<img src="../../img/微信图片_20190318171038.jpg"/>
+					    	<img src="../../img/微信图片_20190318171038.jpg"/>
+					    	<img src="../../img/微信图片_20190318171038.jpg"/>
+					    	<img src="../../img/微信图片_20190318171038.jpg"/>
+					    </div>
+					    <div class="layui-tab-item">
+					    	<img src="../../img/微信图片_20190318171023.jpg"/>
+					    	<img src="../../img/微信图片_20190318171023.jpg"/>
+					    	<img src="../../img/微信图片_20190318171023.jpg"/>
+					    	<img src="../../img/微信图片_20190318171023.jpg"/>
+					    	<img src="../../img/微信图片_20190318171023.jpg"/>
+					    </div>
+					    <div class="layui-tab-item">
+					    	<img src="../../img/微信图片_20190318171042.jpg"/>
+					    	<img src="../../img/微信图片_20190318171042.jpg"/>
+					    	<img src="../../img/微信图片_20190318171042.jpg"/>
+					    	<img src="../../img/微信图片_20190318171042.jpg"/>
+					    	<img src="../../img/微信图片_20190318171042.jpg"/>
+					    </div>
+					    <div class="layui-tab-item">
+					    	<img src="../../img/微信图片_20190318171049.jpg"/>
+					    	<img src="../../img/微信图片_20190318171049.jpg"/>
+					    	<img src="../../img/微信图片_20190318171049.jpg"/>
+					    	<img src="../../img/微信图片_20190318171049.jpg"/>
+					    	<img src="../../img/微信图片_20190318171049.jpg"/>
+					    </div>
+					</div>
+				</div>     
+		    </div>
 		</div>
 		</div>
 	</body>
 	<script>
 		 $(document).ready(function(){
-	    	layui.use(['element','form','jquery'],function(){
+	    	layui.use(['element','form','jquery','carousel'],function(){
 	    		var element = layui.element,
 	    			$ = layui.jquery,
+	    			carousel = layui.carousel,
 	    			form = layui.form
-
+				
+//						轮播
+				carousel.render({
+					elem: '#test1'
+				    ,width: '100%' //设置容器宽度
+				    ,height:'90%'
+				    ,arrow: 'none' //始终显示箭头
+				    ,anim: 'fade' //切换动画方式
+				    ,trigger:'mouseover'   //鼠标指示器事件
+				    ,indicator:'0'  //指示器显示位置
+				})
+						
+//						选项卡清除点击添加鼠标移动事件
+				 $(".layui-tab-title li").hover(function(){
+                    var $i=$(this).index();
+                    $(this).addClass("layui-this").siblings().removeClass("layui-this");
+                    $(".layui-tab-content .layui-tab-item").eq($i).addClass("layui-show").siblings().removeClass("layui-show");
+                });
 	    	})
 	    })
 	</script>
