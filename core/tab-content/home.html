@@ -55,10 +55,10 @@
 				margin: 10px;
 				transition: all 0.6s;
 			}
-			.layui-tab-item img:hover{
+			.sor img:hover{
 				 transform: scale(1.07);
 			}
-			.layui-tab-content div{
+			.layui-tab-content .sp{
 				padding:0 20px;
 			}
 			.layui-tab-item{
@@ -70,7 +70,58 @@
 			.sp a{
 				font: 11px/25px "微软雅黑";
 				display: block;
-				margin: ;
+			}
+			.site-idea{
+				display: flex;
+			    -webkit-justify-content: space-around;
+			    justify-content: space-around;
+			}
+			.site-idea li{
+				width: 25%;
+				height: 180px;
+				background: #000000;
+				margin: 10px;
+				float: left;
+			}
+			.site-idea img{
+				width: 100%;
+				height: 100%;
+				margin: 0;
+			}
+			.mask{
+				width: 70px;
+				height: 70px;
+				background: rgba(11,21,12,0.3);
+				border-radius: 50%;
+				position: relative;
+				bottom: 80%;
+				left: 20%;
+				padding: 20px;
+				color: #fff;
+			}
+			.doc-icon-name{
+				font:15px "微软雅黑";
+			}
+			.doc-icon-code{
+				font: 10px/25px "微软雅黑";
+				border-bottom: 1px solid #fff;
+			}
+			.doc-icon-fontclass{
+				font: 10px "微软雅黑";
+				line-height: 15px;
+				text-align: center;
+			}
+			.doc-icon-fontclass span{
+				font: 18px "微软雅黑";
+				color: #FD482C;
+				margin: 1px;
+			}
+			.doc-icon-fontclass cite{
+				vertical-align: top;
+				font: 12px "微软雅黑";
+			}
+			.site-idea li{
+				cursor:pointer;
 			}
 		</style>
 	</head>
@@ -130,7 +181,7 @@
 					    <li>商品</li>
 					    <li>商品</li>
 				    </ul>
-				    <div class="layui-tab-content">
+				    <div class="layui-tab-content sor">
 					    <div class="layui-tab-item layui-show">
 					    	<img src="../../img/20190226142123.jpg"/>
 					    	<img src="../../img/20190226142123.jpg"/>
@@ -202,14 +253,14 @@
 				    <div class="layui-tab-content">
 					    <div class="layui-tab-item layui-show">
 					    	<div class=" sp layui-col-md3" style="height: 400px;background: #fff;text-align: left;border-right: 1px dashed #000;">
-					    		<div class="layui-card-header" style="border-bottom:none;text-align: left;padding: 0; font: 14px/42px '微软雅黑';">促销</div>
+					    		<div class="layui-card-header" style="border-bottom:none;text-align: left;padding: 0; color: #000000; font: 14px/42px '微软雅黑';">促销</div>
 					    		<a>河南省聚优澳品供应链管理有限公司</a>
 					    		<a>河南省聚优澳品供应链管理有限公司</a>
 					    		<a>河南省聚优澳品供应链管理有限公司</a>
 					    		<a>河南省聚优澳品供应链管理有限公司</a>
 					    		<a>河南省聚优澳品供应链管理有限公司</a>
 					    		<a>河南省聚优澳品供应链管理有限公司</a>
-					    		<div class="layui-card-header" style="border-bottom:none;text-align: left;padding: 0; font: 14px/42px '微软雅黑';">发现</div>
+					    		<div class="layui-card-header" style="border-bottom:none;text-align: left;padding: 0; color: #000000; font: 14px/42px '微软雅黑';">发现</div>
 					    		<a>河南省聚优澳品供应链管理有限公司</a>
 					    		<a>河南省聚优澳品供应链管理有限公司</a>
 					    		<a>河南省聚优澳品供应链管理有限公司</a>
@@ -217,11 +268,132 @@
 					    		<a>河南省聚优澳品供应链管理有限公司</a>
 					    		<a>河南省聚优澳品供应链管理有限公司</a>
 					    	</div>
-					    	<div class="layui-col-md9" style="height: 400px;background: #fff;"></div>
+					    	<div class="layui-col-md9" style="height: 400px;background: #fff;">
+					    		<ul class="site-idea" style="width: 100%;">
+					    			<li>
+					    				<img 
+					    					
+					    					src="../../img/微信图片_20190318171042.jpg"/>
+					    				<div class="mask">
+					    					<div class="doc-icon-name">奶粉</div>
+										    <div class="doc-icon-code">澳大利亚进口</div>
+										    <div class="doc-icon-fontclass"><cite>$</cite><span>200</span>起</div>
+					    				</div>
+					    			</li>
+					    			<li>
+					    				<img src="../../img/微信图片_20190318171042.jpg"/>
+					    				<div class="mask">
+					    					<div class="doc-icon-name">奶粉</div>
+										    <div class="doc-icon-code">澳大利亚进口</div>
+										    <div class="doc-icon-fontclass"><cite>$</cite><span>200</span>起</div>
+					    				</div>
+					    			</li>
+					    			<li>
+					    				<img src="../../img/微信图片_20190318171042.jpg"/>
+					    				<div class="mask">
+					    					<div class="doc-icon-name">奶粉</div>
+										    <div class="doc-icon-code">澳大利亚进口</div>
+										    <div class="doc-icon-fontclass"><cite>$</cite><span>200</span>起</div>
+					    				</div>
+					    			</li>
+					    		</ul>
+					    		<ul class="site-idea" style="width: 100%;">
+					    			<li>
+					    				<img src="../../img/微信图片_20190318171042.jpg"/>
+					    				<div class="mask">
+					    					<div class="doc-icon-name">奶粉</div>
+										    <div class="doc-icon-code">澳大利亚进口</div>
+										    <div class="doc-icon-fontclass"><cite>$</cite><span>200</span>起</div>
+					    				</div>
+					    			</li>
+					    			<li>
+					    				<img src="../../img/微信图片_20190318171042.jpg"/>
+					    				<div class="mask">
+					    					<div class="doc-icon-name">奶粉</div>
+										    <div class="doc-icon-code">澳大利亚进口</div>
+										    <div class="doc-icon-fontclass"><cite>$</cite><span>200</span>起</div>
+					    				</div>
+					    			</li>
+					    			<li>
+					    				<img src="../../img/微信图片_20190318171042.jpg"/>
+					    				<div class="mask">
+					    					<div class="doc-icon-name">奶粉</div>
+										    <div class="doc-icon-code">澳大利亚进口</div>
+										    <div class="doc-icon-fontclass"><cite>$</cite><span>200</span>起</div>
+					    				</div>
+					    			</li>
+					    			
+					    		</ul>
+					    	</div>
 					    </div>
 					</div>
 				</div>    
-		    </div>									
+		    </div>		
+		    											<!--攻略-->
+		    <div id="name" class="layui-col-md12"style="height: 300px; margin-top:50px; background: #EEEEEE;">
+				<h2 style="float:left;line-height: 40px;margin-left:30px;">攻略</h2>
+				<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief" style="margin: 0;">
+				    <ul class="layui-tab-title" style="width: 50%; margin-right:40% ; text-align: center; float: left;margin-bottom:40px;">
+					    <li class="layui-this">商品</li>
+					    <li>商品</li>
+					    <li>商品</li>
+					    <li>商品</li>
+					    <li>商品</li>
+				    </ul>
+				<ul class="layui-nav layui-layout-right" style="background:none;padding: 0 5px 0 0;">
+					<li class="layui-nav-item" style="height: 30px;">
+						<dl class="layui-nav-child" style="margin-top:-35px ;">
+					       <dd><a href="javascript:;" ><cite>河南</cite></a></dd>
+					       <dd><a href="javascript:;">北京</a></dd>
+					       <dd><a href="javascript:;">深圳</a></dd>
+					       <dd><a href="javascript:;">上海</a></dd>
+					       <dd><a href="javascript:;">广东</a></dd>
+					    </dl>							   
+					</li>
+				</ul>
+				    <div class="layui-tab-content">
+					    <div class="layui-tab-item layui-show">
+					    	<div class=" sp layui-col-md3" style="height: 200px;background: #fff;text-align: left;border-right: 1px dashed #000;">
+					    		<div class="layui-card-header" style="border-bottom:none;text-align: left;padding: 0; color: #000000; font: 14px/42px '微软雅黑';">促销</div>
+					    		<a>河南省聚优澳品供应链管理有限公司</a>
+					    		<a>河南省聚优澳品供应链管理有限公司</a>
+					    		<a>河南省聚优澳品供应链管理有限公司</a>
+					    		<a>河南省聚优澳品供应链管理有限公司</a>
+					    		<a>河南省聚优澳品供应链管理有限公司</a>
+					    		<a>河南省聚优澳品供应链管理有限公司</a>
+					    	</div>
+					    	<div class="layui-col-md9" style="height: 200px;background: #fff;">
+					    		<ul class="site-idea" style="width: 100%;">
+					    			<li>
+					    				<img src="../../img/微信图片_20190318171049.jpg"/>
+					    				<div class="mask">
+					    					<div class="doc-icon-name">奶粉</div>
+										    <div class="doc-icon-code">澳大利亚进口</div>
+										    <div class="doc-icon-fontclass"><cite>$</cite><span>200</span>起</div>
+					    				</div>
+					    			</li>
+					    			<li>
+					    				<img src="../../img/微信图片_20190318171049.jpg"/>
+					    				<div class="mask">
+					    					<div class="doc-icon-name">奶粉</div>
+										    <div class="doc-icon-code">澳大利亚进口</div>
+										    <div class="doc-icon-fontclass"><cite>$</cite><span>200</span>起</div>
+					    				</div>
+					    			</li>
+					    			<li>
+					    				<img src="../../img/微信图片_20190318171049.jpg"/>
+					    				<div class="mask">
+					    					<div class="doc-icon-name">奶粉</div>
+										    <div class="doc-icon-code">澳大利亚进口</div>
+										    <div class="doc-icon-fontclass"><cite>$</cite><span>200</span>起</div>
+					    				</div>
+					    			</li>
+					    		</ul>
+					    	</div>
+					    </div>
+					</div>
+				</div>    
+		    </div>		
 		</div>
 		</div>
 	</body>
@@ -250,8 +422,14 @@
                     $(this).addClass("layui-this").siblings().removeClass("layui-this");
                     $(".layui-tab-content .layui-tab-item").eq($i).addClass("layui-show").siblings().removeClass("layui-show");
              	});
-//           				流加载
-					
+//           				口碑之作hover效果
+				$(".site-idea li").hover(function(){
+					$(this).children('img').css("transform","scale(1.07)");
+					$(this).children('.mask').css("background","rgba(11,21,12,0.5)");
+				},function(){
+					$(this).children('img').css("transform","scale(1.0)");
+					$(this).children('.mask').css("background","rgba(11,21,12,0.3)");
+				})
 	    	})
 	    })
 	</script>
