@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>聚优澳品</title>
+		<title>薪资帮</title>
 		<link rel="stylesheet" href="../layui/layui-v2.4.5/layui/css/layui.css">
 		<script src="../chajian/jquery-3.2.1.min.js"></script>
 		<script src="../layui/layui-v2.4.5/layui/layui.js"></script>
@@ -26,16 +26,15 @@
 				right: 16%;
 			}
 			.site-banner{
-				background: url('../img/timg.jpg') no-repeat center;
+				background: url('../img/500450104.jpg') no-repeat center;
 				background-size:100% 100%;
 			}
 			.site-idea li{
 				height: 150px;
 			}
 			.site-idea img{
-				height: 70%;
-				width: 10%;
-				float: left;
+				height: 50%;
+				width: 100%;
 			}
 			.site-idea a{
 				font: 20px "微软雅黑";
@@ -44,10 +43,17 @@
 				margin-left:70%;
 			}
 			.site-idea span{
-				width: 80%;
+				width: 100%;
 				display: block;
-				margin-left:15%;
 				text-align: left;
+				font:14px/20px "微软雅黑";
+				margin-top: 40px;
+			}
+			.site-idea{
+				color: #B2B2B2;
+			}
+			.site-idea legend{
+				color: #000000;
 			}
 			.site-download a{
 				border: 1px solid #fff;
@@ -56,14 +62,134 @@
 				color: #fff;
 				padding: 15px;
 			}
+			.layui-nav .layui-nav-item a{
+				color: #000000;
+			}
+			.layui-nav .layui-nav-item a:hover{
+				color: #009688;
+			}
+			.site-idea{
+				display: flex;
+			    -webkit-justify-content: space-around;
+			    justify-content: space-around;
+			}
+			.site-idea li{
+				width: 25%;
+				height: 400px;
+				padding: 0 20px;
+			}
+			.site-idea li span{
+				text-align: center;
+			}
+			.site-idea li:hover{
+				cursor:pointer;
+				box-shadow: 0 0 4px #CCCCCC;
+				margin-top:-6px ;
+				transition: all .4s ease-in-out;
+				color: #000000;
+			}
+					/*公司介绍*/
+			.layui-card-body a{
+				display: block;
+				margin: 15px 0 15px 0;
+			}
+			.layui-card-body span{
+				font: 10px "微软雅黑";
+				color: #009F95;
+				border: 1px solid #FFB800;
+				margin-right:15px;
+				border-radius:3px;
+				padding: 0 4px;
+			}
+			.layui-card-body cite{
+				font: 8px "微软雅黑";
+				float: right;
+				color: #777777;
+			}
+			.layui-anim p{
+				color: #fff;
+			}
+			.layui-anim p label{
+				color: #FF5722;
+			}
+			/*登录区域*/
+		 .box-row{
+		 	margin: 0 auto;
+		 	margin-top:-26% ;
+		 	margin-left:75% ;
+		 	height: 65%;
+		 	width: 17%;
+		 	background: rgba(246,246,246,0.2);
+		 	border: 1px solid rgba(246,246,246,0.8);
+		 	border-radius:10px ;
+		 }
+		 .avatar{
+		 	margin: 50px auto;
+		 	width: 100px;
+		 	height: 100px;
+		 	border: 2px solid rgba(246,246,246,0.8);
+		 	background-size:100% 100%;
+		 	border-radius:50% ;
+		 }
+		 .search{
+		 	height: 7%;
+		 	width: 100%;
+		 	margin: 0 auto;
+		 	margin-bottom:30px ;
+		 	text-align: center;
+			font: 14px "微软雅黑" ;
+		 	
+		 }
+		 input{
+		 	outline:none;
+		 	text-align: center;
+		 	height: 100%;
+		 	width: 80%;
+		 	display: inline-block;
+		 	margin-bottom: 30px ;
+		 	line-height: 32px;
+		 	border-radius:15px ;
+		 	margin: 0 auto;
+		 	border: 1px solid rgba(246,246,246,0.8);
+		 	padding: 0;
+		 	font: 14px "微软雅黑" ;
+		 }
+		 .search:hover{
+		 	cursor:pointer;
+		 }
+		 span:hover{
+		 	cursor:pointer;
+		 }
+		 .red{
+		 	background:#009688;
+		 	color: #fff;
+		 }
+		 .txt{
+		 	width: 60%;
+		 	margin: 0 20%;
+		 	font: 12px "微软雅黑";
+		 	line-height: 30px;
+		 	color: #009688;
+		 	border:0;
+		 }
+		 .txt-tow{
+		 	float: right;
+		 }
+		 .txt-tow:hover{
+		 	cursor:pointer;
+		 }
+		 .red::-webkit-input-placeholder{
+            color:#fff;
+        }
+
 		</style>
 	</head>
 	<body>
 														<!--头部区域-->
-			<div class="layui-header header header-doc" style="background: rgba(53,87,113,1); position: fixed;width: 100%;">
+			<div class="layui-header header header-doc" style="background: rgba(255,255,255,0.6); position: fixed;width: 100%;">
 				<div class="layui-main" style="margin: 0 auto;">
 					<a class="logo" style="position: absolute;">
-						<img src="../img/log.png"/ style="height: 60px;">
+						<img src="../img/logo-small.png"/ style="height: 60px;">
 					</a>
 					<ul class="layui-nav">
 						<li class="layui-nav-item">
@@ -92,89 +218,106 @@
 				</div>
 			</div>
 														<!--中部logo区域-->
-			<div class="site-banner" style="height: 600px; width: 100%; position: relative;">
-				<div class="site-banner-main" style="position: absolute;width: 100%; height: 100%;">
-					<!--<div class="layui-anim site-desc site-desc-anim"style="position: relative;width: 100%;text-align: center;">
-						<p style="margin-top: 9%; font: 40px '微软雅黑'; color: #fff;">澳洲直邮,正品免费包邮</p>
+			<div class="site-banner" style="height: 700px; width: 100%; position: relative;">
+				<div class="site-banner-main" style="position: absolute;width: 100%; height: 100%;background: rgba(0,0,0,0.2);">
+					<div class="layui-anim site-desc site-desc-anim"style="position: relative;width: 100%;text-align: center;">
+						<p style="margin-top: 20%; font: 40px '微软雅黑'; ">想高效管理/<label>考勤</label>/<label>薪资</label>/<label>一卡通</label>?</p>
+						<p style="margin-top: 1%; font: 30px '微软雅黑';">薪资帮丶您的企业帮手</p>
 					</div>
-					<div class="site-zfj site-zfj-anim" style="text-align: center;">
-						<img src="../img/bg.png"/ style="height: 200px;">
-					</div>
-					<div class="site-download" style="text-align: center;">
+					<div class="site-download" style="text-align: center; margin-top:80px ;">
 						<a href="javascript"style="margin-right:10% ;">
 							联系我们
 						</a>
 						<a href="../home/denglu/stration-zc.html">
 							立即注册
 						</a>
-					</div>-->
+					</div>
+													<!--登录区域-->
+					<div class="box-row">
+						<div class="avatar"></div>
+						<div class="search">
+							<input placeholder="请输入用户名/手机号" value="" style="outline:none;"/>
+						</div>
+						<div class="search">
+							<input class="word" type="password"  placeholder="请输入密码" value="" style="outline:none ;"/>
+						</div>		
+						<div class="search">
+							<input class="red"placeholder="登录" disabled="disabled" value="" style="outline:none;"/>
+						</div>
+						<div class="txt">
+							<span>忘记密码?</span>
+							<span class="txt-tow">注册</span>
+						</div>
+					</div>
 				</div>
 			</div>
-														<!--中部主内容区域-->
+														<!--中部内容区域-->
+														
+														<!--版本介绍-->
 			<div class="layui-main" style="margin:0 auto; text-align: center;">
 				<ul class="site-idea" style="margin: 50px 0;">
 					<li>
 						<fieldset class="layui-elem-field layui-field-title">
-							<legend>奶粉</legend>
+							<legend>免费版</legend>
 						</fieldset>
-						<img src="../img/微信图片_20190318171023.jpg"/>
+						<img src="../img/6c12cff3c483cbc81ac6f195ac8dd4c6.png"/>
 						<span>
-							曾经，三鹿奶粉事件激发了人们对于进口奶粉的极大需求，人们纷纷托熟人代购进口奶粉，于是，各种各样方便进行海淘操作的商业模式纷纷出现，朋友圈的代购越来越少，并不是市场小了，世界发展越来越快速，人们接触越来越频繁，商品的流通也越来越便捷高效，消费者有了更多的选择需求，海淘的市场蛋糕是越来越大的，个人代购其实是被业务更专业、服务更周到、体验更完美的聚优澳品们给替代了。
-						</span>	
-						<br>
-						<a>立即抢购</a>
+							注重与顾客之间的沟通，发掘内心的渴望，站在顾客体验的角度，去审视自己的产品和服务;以顾客的真实感受为准，去建立体验式服务;
+						</span>					
 					</li>
 					<li>
 						<fieldset class="layui-elem-field layui-field-title">
-							<legend>蔓越莓</legend>
+							<legend>标准版</legend>
 						</fieldset>
-						<img src="../img/微信图片_20190318171038.jpg"/>
+						<img src="../img/f2375524404653a571dca929cceab9b3.jpg"/>
 						<span>
-							曾经，三鹿奶粉事件激发了人们对于进口奶粉的极大需求，人们纷纷托熟人代购进口奶粉，于是，各种各样方便进行海淘操作的商业模式纷纷出现，朋友圈的代购越来越少，并不是市场小了，世界发展越来越快速，人们接触越来越频繁，商品的流通也越来越便捷高效，消费者有了更多的选择需求，海淘的市场蛋糕是越来越大的，个人代购其实是被业务更专业、服务更周到、体验更完美的聚优澳品们给替代了。
-						</span>	
-						<br>
-						<a>立即抢购</a>
+							注重与顾客之间的沟通，发掘他们内心的渴望，站在顾客体验的角度，去审视自己的产品和服务。以顾客的真实感受为准，去建立体验式服务。
+						</span>
 					</li>
 					<li>
 						<fieldset class="layui-elem-field layui-field-title">
-							<legend>胶原蛋白</legend>
+							<legend>套餐版</legend>
 						</fieldset>
-						<img src="../img/微信图片_20190318171042.jpg"/>
+						<img src="../img/90df050afbbfe3494d198d74be9c7edb.jpg"/>
 						<span>
-							曾经，三鹿奶粉事件激发了人们对于进口奶粉的极大需求，人们纷纷托熟人代购进口奶粉，于是，各种各样方便进行海淘操作的商业模式纷纷出现，朋友圈的代购越来越少，并不是市场小了，世界发展越来越快速，人们接触越来越频繁，商品的流通也越来越便捷高效，消费者有了更多的选择需求，海淘的市场蛋糕是越来越大的，个人代购其实是被业务更专业、服务更周到、体验更完美的聚优澳品们给替代了。
+							套餐可供选择,包括免费版、标准版、标准增强版、企业版,满足不同业务的业务需求;
 						</span>	
-						<br>
-						<a>立即抢购</a>
-					</li>
-					<li>
-						<fieldset class="layui-elem-field layui-field-title">
-							<legend>葡萄籽</legend>
-						</fieldset>
-						<img src="../img/微信图片_20190318171046.jpg"/>
-						<span>
-							曾经，三鹿奶粉事件激发了人们对于进口奶粉的极大需求，人们纷纷托熟人代购进口奶粉，于是，各种各样方便进行海淘操作的商业模式纷纷出现，朋友圈的代购越来越少，并不是市场小了，世界发展越来越快速，人们接触越来越频繁，商品的流通也越来越便捷高效，消费者有了更多的选择需求，海淘的市场蛋糕是越来越大的，个人代购其实是被业务更专业、服务更周到、体验更完美的聚优澳品们给替代了。
-						</span>	
-						<br>
-						<a>立即抢购</a>
-					</li>
-					<li>
-						<fieldset class="layui-elem-field layui-field-title">
-							<legend>护肝片</legend>
-						</fieldset>
-						<img src="../img/微信图片_20190318171049.jpg"/>
-						<span>
-							曾经，三鹿奶粉事件激发了人们对于进口奶粉的极大需求，人们纷纷托熟人代购进口奶粉，于是，各种各样方便进行海淘操作的商业模式纷纷出现，朋友圈的代购越来越少，并不是市场小了，世界发展越来越快速，人们接触越来越频繁，商品的流通也越来越便捷高效，消费者有了更多的选择需求，海淘的市场蛋糕是越来越大的，个人代购其实是被业务更专业、服务更周到、体验更完美的聚优澳品们给替代了。
-						</span>	
-						<br>
-						<a>立即抢购</a>
 					</li>
 				</ul>
+			</div>
+														<!--公司介绍-->
+			<div id="name" class="layui-col-md12"style="height: 400px; background: #EEEEEE;">
+										<!--左侧区域-->
+				<div class="layui-col-md4 layui-col-md-offset1"style="height: 300px;margin-top: 30px; background: #EEEEEE;">
+			    	<div class="layui-card-header" style="font-weight: 600; font: 20px/42px '微软雅黑';">公司简介</div>
+			    	<div class="layui-card-body" style="padding: 10px 40px;">
+					    莱唔科技公司成立于2016年12月。 公司自主研发的门禁管理系统，为成长型中小企业客户提供高效完善员工管理、薪酬管理、行业一卡通、物业管理等服务集成业务。
+					</div>
+					<div class="layui-card-header" style="font-weight: 600; font: 20px/42px '微软雅黑';">它能解决什么问题?</div>
+					<div class="layui-card-body" style="padding: 10px 40px;">
+					    <a><span>1</span>考勤点分散在各个城市,甚至全球,希望总部统一管控</a>
+					    <a><span>2</span>领导出差,在家,随时想查看公司员工情况</a>
+					    <a><span>3</span>复杂的网络环境</a>
+					    <a><span>4</span>员工自助查询,自动申请请假,更公正透明</a>
+					</div>
+		    	</div>
+		    							<!--右侧区域-->
+		    	<div class="layui-col-md4 layui-col-md-offset1"style="height: 300px;margin-top: 30px; background: #EEEEEE;">
+			    	<div class="layui-card-header" style="font-weight: 600; font: 20px/42px '微软雅黑';">系统特点</div>
+			    	<div class="layui-card-body" style="padding: 10px 40px;">
+					    <a><span style="color: #FF0000;border: 1px solid #FF0000;">置顶</span>统一平台、满足异地考勤需求、手机更方便</a>
+					    <a><span>1</span>B/S架构、整个系统就像一个网站 </a>
+					    <a><span>2</span>考勤数据实时上传、人员自动下载 </a>
+					    <a><span>3</span>功能强大、灵活、人性化界面设计</a>
+					    <a><span>4</span>多种考勤方式支持:指纹、人脸、感应卡、密码</a>
+					</div>
+		    	</div>						
 			</div>
 														<!--底部区域-->
 			<div class="layui-footer footer footer-index" style="padding: 15px 0; line-height: 30px; background: rgba(2,5,1,0.8); color: #FFF9EC;">
 				<div class="layui-main" style="text-align: center;">
-					<p>河南聚优澳品供应链管理有限公司</p>
-					<p>系统开发 莱唔科技 2019 ©版权所有 V1.0.1</p>
+					<p>2019河南莱唔智能科技有限公司</p>
+					<p>版权所有 All Rights Resevied</p>
 					<p>联系我们</p>
 				</div>
 			</div>
