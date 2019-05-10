@@ -143,6 +143,10 @@
 		 	.box-row .txt{width: 80%;margin: 0 auto; font:13px/38px "微软雅黑";color: #fff;}
 		 	.layui-card-body i{margin-right:8px;}
 		 	.zz img{height: 230px;margin-top:15px;}
+		 	.box-zx{position: fixed;right: 20px;bottom: 50px; background: #007DDB;padding: 15px;color:#fff;}
+		 	.box-zx:hover{cursor:pointer;}
+		 	.zx-zc{height: 120px;width: 120px;background: #0066BB;position: absolute;right: 58px;bottom:0;display: none;text-align: center;}
+		 	.zx-zc a{display: inline-block;height: auto;padding: 5px 10px; color: #fff;}
 		</style>
 	</head>
 	<body>
@@ -323,6 +327,14 @@
 					<p>联系我们</p>
 				</div>
 			</div>
+			<div class="box-zx">资询<br>我们
+				<div class="zx-zc">
+					<a>在线咨询</a>
+					<a>立即注册</a>
+					<a>下载手机APP</a>
+					<a>关注公众号</a>
+				</div>
+			</div>
 	</body>
 	<script>
 		$(document).ready(function(){
@@ -333,6 +345,12 @@
 				if(window.pageYOffset >= 70){
 					$('.layui-header').css("background-color","red")
 				}
+			})			
+			$('.box-zx').mouseover(function(){
+				$('.zx-zc').fadeIn();
+			})
+			$('.box-zx').mouseleave(function(){
+				$('.zx-zc').fadeOut();
 			})
 		})
 		
