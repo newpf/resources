@@ -7,131 +7,33 @@
 		<script src="../chajian/jquery-3.2.1.min.js"></script>
 		<script src="../layui/layui-v2.4.5/layui/layui.js"></script>
 		<style>
-			ul{
-				margin: 0;
-				list-style: none;
-			}
-			.layui-header ul{
-				position: absolute;
-				right: 0;
-				padding: 0;
-				background: none;
-			}
-			.layui-header ul li{
-				margin: 0 20px;
-			}
-			.Btn{
-				position: absolute;
-				top: 60px;
-				right: 16%;
-			}
-			.site-banner{
-				background: url('../img/500450104.jpg') no-repeat center;
-				background-size:100% 100%;
-			}
-			.site-idea li{
-				height: 150px;
-			}
-			.site-idea img{
-				height: 50%;
-				width: 100%;
-			}
-			.site-idea a{
-				font: 20px "微软雅黑";
-				color: red;
-				line-height: 50px;
-				margin-left:70%;
-			}
-			.site-idea span{
-				width: 100%;
-				display: block;
-				text-align: left;
-				font:14px/20px "微软雅黑";
-				margin-top: 40px;
-			}
-			.site-idea{
-				color: #B2B2B2;
-			}
-			.site-idea legend{
-				color: #000000;
-			}
-			.site-download a{
-				border: 1px solid #fff;
-				border-radius: 10px;
-				font: 30px "微软雅黑";
-				color: #fff;
-				padding: 15px;
-			}
-			.layui-nav .layui-nav-item a{
-				color: #000000;
-			}
-			.layui-nav .layui-nav-item a:hover{
-				color: #009688;
-			}
-			.site-idea{
-				display: flex;
-			    -webkit-justify-content: space-around;
-			    justify-content: space-around;
-			}
-			.site-idea li{
-				width: 25%;
-				height: 400px;
-				padding: 0 20px;
-			}
-			.site-idea li span{
-				text-align: center;
-			}
-			.site-idea li:hover{
-				cursor:pointer;
-				box-shadow: 0 0 4px #CCCCCC;
-				margin-top:-6px ;
-				transition: all .4s ease-in-out;
-				color: #000000;
-			}
+			ul{margin: 0; list-style: none;}
+			.layui-header ul{position: absolute; right: 0; padding: 0; background: none;}
+			.layui-header ul li{margin: 0 20px;}
+			.Btn{position: absolute; top: 60px; right: 16%;}
+			.site-banner{background: url('../img/500450104.jpg') no-repeat center; background-size:100% 100%;}
+			.site-idea li{height: 150px;}
+			.site-idea img{height: 50%; width: 100%;}
+			.site-idea a{font: 20px "微软雅黑"; color: red; line-height: 50px; margin-left:70%;}
+			.site-idea span{width: 100%; display: block; text-align: left; font:14px/20px "微软雅黑"; margin-top: 40px;}
+			.site-idea{color: #B2B2B2;}
+			.site-idea legend{color: #000000;}
+			.site-download a{border: 1px solid #fff; border-radius: 10px; font: 30px "微软雅黑"; color: #fff; padding: 15px;}
+			.layui-nav .layui-nav-item a{color: #000000;}
+			.layui-nav .layui-nav-item a:hover{color: #009688;}
+			.site-idea{display: flex; -webkit-justify-content: space-around; justify-content: space-around;}
+			.site-idea li{width: 25%; height: 400px; padding: 0 20px;}
+			.site-idea li span{text-align: center;}
+			.site-idea li:hover{cursor:pointer; box-shadow: 0 0 4px #CCCCCC; margin-top:-6px ; transition: all .4s ease-in-out; color: #000000;}
 					/*公司介绍*/
-			.layui-card-body a{
-				display: block;
-				margin: 15px 0 15px 0;
-			}
-			.layui-card-body span{
-				font: 10px "微软雅黑";
-				color: #009F95;
-				border: 1px solid #FFB800;
-				margin-right:15px;
-				border-radius:3px;
-				padding: 0 4px;
-			}
-			.layui-card-body cite{
-				font: 8px "微软雅黑";
-				float: right;
-				color: #777777;
-			}
-			.layui-anim p{
-				color: #fff;
-			}
-			.layui-anim p label{
-				color: #FF5722;
-			}
+			.layui-card-body a{display: block; margin: 15px 0 15px 0;}
+			.layui-card-body span{font: 10px "微软雅黑"; color: #009F95; border: 1px solid #FFB800; margin-right:15px; border-radius:3px; padding: 0 4px;}
+			.layui-card-body cite{ font: 8px "微软雅黑"; float: right; color: #777777;}
+			.layui-anim p{color: #fff;}
+			.layui-anim p label{color: #FF5722;}
 				/*登录区域*/
-			.box-row{
-				text-align: center;
-			 	margin-top:-26% ;
-			 	margin-left:75% ;
-			 	height: 65%;
-			 	width: 17%;
-			 	background: rgba(246,246,246,0.5);
-			 	border: 1px solid rgba(246,246,246,0.9);
-			 	border-radius:10px;
-			 	z-index:9;
-			 }
-			.avatar{
-			 	margin: 50px auto;
-			 	width: 100px;
-			 	height: 100px;
-			 	border: 2px solid rgba(246,246,246,0.8);
-			 	background-size:100% 100%;
-			 	border-radius:50% ;
-			 }
+			.box-row{ text-align: center; margin-top:-26% ; margin-left:75% ; height: 65%; width: 17%; background: rgba(246,246,246,0.5); border: 1px solid rgba(246,246,246,0.9); border-radius:10px; z-index:9;}
+			.avatar{margin: 50px auto; width: 100px; height: 100px; border: 2px solid rgba(246,246,246,0.8); background-size:100% 100%; border-radius:50% ;}
 			.box-row input{text-align: center; margin: 0 auto; margin-bottom: 30px; width: 80%; border-radius: 20px;}
 			.box-row .btn{color: #fff; width: 80%; background: #009688;margin: 0 auto;margin-bottom: 10px;border-radius: 20px;font:13px/38px "微软雅黑";}
 		 	.box-row .txt{width: 80%;margin: 0 auto; font:13px/38px "微软雅黑";color: #fff;}
@@ -179,7 +81,7 @@
 														<!--中部logo区域-->
 			<div class="site-banner" style="height: 700px; width: 100%; position: relative;">
 				<div class="site-banner-main" style="position: absolute;width: 100%; height: 100%;">
-					<div class="layui-anim site-desc site-desc-anim"style="position: relative;width: 40%;margin:0 auto; text-align: center;">
+					<div class="layui-anim site-desc site-desc-anim"style="position: relative;width: 40%;margin:0 a/uto; text-align: center;">
 						<p style="margin-top: 50%; font: 40px '微软雅黑'; ">想高效管理/<label>考勤</label>/<label>薪资</label>/<label>一卡通</label>?</p>
 						<p style="margin-top: 1%; font: 30px '微软雅黑';">薪资帮丶您的企业帮手</p>
 					</div>
@@ -342,7 +244,7 @@
 			});		
 //						定位左下角资讯
 			$('.box-zx').mouseover(function(){
-				$('.zx-zc').fadeIn();
+				$('.zx-zc').fadeIn() ;
 			});
 			$('.box-zx').mouseleave(function(){
 				$('.zx-zc').fadeOut();
